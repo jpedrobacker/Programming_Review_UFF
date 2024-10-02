@@ -5,8 +5,21 @@ def	ex1(lista_ex01):
 			aux = i
 	return aux
 
-def ex2(n):
+def	ex2(n):
 	print(n)
+
+def	ex3():
+
+def	ex4():
+
+def	ex5():
+
+def	ex6():
+
+def	ex7():
+
+def	ex8():
+
 
 
 if __name__ == "__main__":
@@ -46,22 +59,34 @@ if __name__ == "__main__":
 	if int(ex_num) == 3:
 		print("--------- exercicio 3 ----------")
 
+		ex3()
+
 	if int(ex_num) == 4:
 		print("--------- exercicio 4 ----------")
+
+		ex4()
 
 	if int(ex_num) == 5:
 		print("--------- exercicio 5 ----------")
 
+		ex5()
+
 	if int(ex_num) == 6:
 		print("--------- exercicio 6 ----------")
+
+		ex6()
 
 	if int(ex_num) == 7:
 		print("--------- exercicio 7 ----------")
 
+		ex7()
+
 	if int(ex_num) == 8:
 		print("--------- exercicio 8 ----------")
 
-		print("------------- Fim --------------")
+		ex8()
+
+	print("------------- Fim --------------")
 
 
 
