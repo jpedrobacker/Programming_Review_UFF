@@ -5,20 +5,34 @@ def	ex1(lista_ex01):
 			aux = i
 	return aux
 
+def	is_prime(n):
+	if n < 1:
+		return False
+	for div in range (2, int(n**0.5) + 1):
+		if n % div == 0:
+			return False
+	return True
+
 def	ex2(n):
-	print(n)
+	primos = []
+	num = 2
+	while len(primos) < n:
+		if is_prime(num):
+			primos.append(num)
+		num += 1
+	return primos
 
-def	ex3():
+#def	ex3():
 
-def	ex4():
+#def	ex4():
 
-def	ex5():
+#def	ex5():
 
-def	ex6():
+#def	ex6():
 
-def	ex7():
+#def	ex7():
 
-def	ex8():
+#def	ex8():
 
 
 
@@ -54,37 +68,37 @@ if __name__ == "__main__":
 					print("Por favor, digite um número positivo")
 			except ValueError:
 				print("Por favor, digite um número válido.")
-		ex2(n)
+		print(ex2(n))
 
 	if int(ex_num) == 3:
 		print("--------- exercicio 3 ----------")
 
-		ex3()
+		#ex3()
 
 	if int(ex_num) == 4:
 		print("--------- exercicio 4 ----------")
 
-		ex4()
+		#ex4()
 
 	if int(ex_num) == 5:
 		print("--------- exercicio 5 ----------")
 
-		ex5()
+		#ex5()
 
 	if int(ex_num) == 6:
 		print("--------- exercicio 6 ----------")
 
-		ex6()
+		#ex6()
 
 	if int(ex_num) == 7:
 		print("--------- exercicio 7 ----------")
 
-		ex7()
+		#ex7()
 
 	if int(ex_num) == 8:
 		print("--------- exercicio 8 ----------")
 
-		ex8()
+		#ex8()
 
 	print("------------- Fim --------------")
 
