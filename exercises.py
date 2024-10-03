@@ -5,26 +5,52 @@ def	ex1(lista_ex01):
 			aux = i
 	return aux
 
-def	is_prime(n):
-	if n < 1:
-		return False
-	for div in range (2, int(n**0.5) + 1):
-		if n % div == 0:
-			return False
-	return True
-
 def	ex2(n):
 	primos = []
 	num = 2
+	if n < 1:
+		return False
 	while len(primos) < n:
-		if is_prime(num):
+		is_prime = True
+		for div in range (2, int(num**0.5) + 1):
+			if num % div == 0:
+				is_prime = False
+				break
+		if is_prime:
 			primos.append(num)
 		num += 1
 	return primos
 
-#def	ex3():
+def	ex3(q):
+	sum = 0
+	for x in range (1, q + 1, 2):
+		p_cond = False
+		sum += x
+		if sum == q:
+			p_cond = True
+			break
+	for x in range (1, q + 1, 1):
+		s_cond = False
+		if x ** 2 == q:
+			s_cond = True
+			break
+	if p_cond and s_cond:
+		return "É quadrado perfeito"
+	else:
+		return "Não é um quadrado perfeito"
 
-#def	ex4():
+def	ex4(lista_ex04):
+	zer = 0
+	pos = 0
+	neg = 0
+	for x in lista_ex04:
+		if x == 0:
+			zer += 1
+		elif x > 0:
+			pos += 1
+		elif x < 0:
+			neg += 1
+	print(f"Zeros = {zer}\nPositivos = {pos}\nNegativos = {neg}")
 
 #def	ex5():
 
@@ -33,8 +59,6 @@ def	ex2(n):
 #def	ex7():
 
 #def	ex8():
-
-
 
 if __name__ == "__main__":
 	ex_num = input("Qual ex?: ")
@@ -72,13 +96,32 @@ if __name__ == "__main__":
 
 	if int(ex_num) == 3:
 		print("--------- exercicio 3 ----------")
-
-		#ex3()
+		while True:
+			q = input("Digite um número positivo: ")
+			try:
+				q = int(q)
+				if q > 0:
+					break
+				else:
+					print("Por favor, digite um número positivo")
+			except ValueError:
+				print("Por favor, digite um número válido.")
+		print(ex3(q))
 
 	if int(ex_num) == 4:
 		print("--------- exercicio 4 ----------")
-
-		#ex4()
+		lista_ex04 = []
+		while True:
+			h = input("Digite um número ou termine: ")
+			if h == "termine":
+				break
+			try:
+				h = int(h)
+				print("Número adicionado!")
+				lista_ex04.append(h)
+			except ValueError:
+				print("Por favor, digite um número válido.")
+		ex4(lista_ex04)
 
 	if int(ex_num) == 5:
 		print("--------- exercicio 5 ----------")

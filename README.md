@@ -1,4 +1,4 @@
-# Fluminense Federal University / Universidade Federal Fluminense
+# Universidade Federal Fluminense
 ## Institute of Computing / Instituto de Computação
 ### Department of Computer Science / Departamento de Ciência da Computação
 
