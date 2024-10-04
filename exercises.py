@@ -52,7 +52,19 @@ def	ex4(lista_ex04):
 			neg += 1
 	print(f"Zeros = {zer}\nPositivos = {pos}\nNegativos = {neg}")
 
-#def	ex5():
+def	ex5(lista_ex05):
+	zer2 = 0
+	pos2 = 0
+	neg2 = 0
+	total = len(lista_ex05)
+	for x in lista_ex05:
+		if x == 0:
+			zer2 += 1
+		elif x > 0:
+			pos2 += 1
+		elif x < 0:
+			neg2 += 1
+	print(f"Zeros = {(zer2 * 100) / total}%\nPositivos = {(pos2 * 100) / total}%\nNegativos = {(neg2 * 100) / total}%")
 
 #def	ex6():
 
@@ -125,8 +137,18 @@ if __name__ == "__main__":
 
 	if int(ex_num) == 5:
 		print("--------- exercicio 5 ----------")
-
-		#ex5()
+		lista_ex05 = []
+		while True:
+			j = input("Digite um número ou termine: ")
+			if j == "termine":
+				break
+			try:
+				j = int(j)
+				print("Número adicionado!")
+				lista_ex05.append(j)
+			except ValueError:
+				print("Por favor, digite um número válido.")
+		ex5(lista_ex05)
 
 	if int(ex_num) == 6:
 		print("--------- exercicio 6 ----------")
