@@ -66,11 +66,30 @@ def	ex5(lista_ex05):
 			neg2 += 1
 	print(f"Zeros = {(zer2 * 100) / total}%\nPositivos = {(pos2 * 100) / total}%\nNegativos = {(neg2 * 100) / total}%")
 
-#def	ex6():
+def	ex6(lista_ex06):
+	triplas = 0
+	for i in range (len(lista_ex06) - 2):
+		if lista_ex06[i] == lista_ex06[i + 1] == lista_ex06[i + 2]:
+			triplas += 1
+	return triplas
 
-#def	ex7():
+def	ex7(d):
+	while True:
+		str = input("Qual método de loop gostaria? while ou for: ")
+		if str == "for":
+			for t in range (d):
+				print("*", end="")
+			print("")
+		elif str == "while":
+			count = 0
+			while count < d:
+				print("*", end="")
+				count += 1
+			print("")
 
-#def	ex8():
+def	ex8(l, c):
+	matriz = []
+	
 
 if __name__ == "__main__":
 	ex_num = input("Qual ex?: ")
@@ -108,6 +127,7 @@ if __name__ == "__main__":
 
 	if int(ex_num) == 3:
 		print("--------- exercicio 3 ----------")
+
 		while True:
 			q = input("Digite um número positivo: ")
 			try:
@@ -122,6 +142,7 @@ if __name__ == "__main__":
 
 	if int(ex_num) == 4:
 		print("--------- exercicio 4 ----------")
+
 		lista_ex04 = []
 		while True:
 			h = input("Digite um número ou termine: ")
@@ -137,6 +158,7 @@ if __name__ == "__main__":
 
 	if int(ex_num) == 5:
 		print("--------- exercicio 5 ----------")
+
 		lista_ex05 = []
 		while True:
 			j = input("Digite um número ou termine: ")
@@ -153,17 +175,57 @@ if __name__ == "__main__":
 	if int(ex_num) == 6:
 		print("--------- exercicio 6 ----------")
 
-		#ex6()
+		lista_ex06 = []
+		while True:
+			j = input("Digite um número ou termine: ")
+			if j == "termine" and len(lista_ex06) > 2:
+				break
+			try:
+				j = int(j)
+				print("Número adicionado!")
+				lista_ex06.append(j)
+			except ValueError:
+				print("Por favor, digite um número válido.")
+		print(ex6(lista_ex06))
 
 	if int(ex_num) == 7:
 		print("--------- exercicio 7 ----------")
 
-		#ex7()
+		while True:
+			d = input("Digite um número positivo: ")
+			try:
+				d = int(d)
+				if d > 0:
+					break
+				else:
+					print("Por favor, digite um número positivo")
+			except ValueError:
+				print("Por favor, digite um número válido.")
+		print(ex7(d))
 
 	if int(ex_num) == 8:
 		print("--------- exercicio 8 ----------")
-
-		#ex8()
+		while True:
+			l = input("Digite um número entre 0 e 100 para linha: ")
+			try:
+				l = int(l)
+				if l > 0:
+					break
+				else:
+					print("Por favor, digite um número positivo")
+			except ValueError:
+				print("Por favor, digite um número válido.")
+		while True:
+			c = input("Digite um número entre 0 e 100 para coluna: ")
+			try:
+				c = int(c)
+				if c > 0:
+					break
+				else:
+					print("Por favor, digite um número positivo")
+			except ValueError:
+				print("Por favor, digite um número válido.")
+		ex8(l, c)
 
 	print("------------- Fim --------------")
 
