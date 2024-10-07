@@ -216,6 +216,7 @@ if __name__ == "__main__":
 
 	if int(ex_num) == 8:
 		print("--------- exercicio 8 ----------")
+
 		while True:
 			l = input("Digite um número entre 0 e 100 para linha: ")
 			try:
