@@ -89,7 +89,18 @@ def	ex7(d):
 
 def	ex8(l, c):
 	matriz = []
-	
+	for i in range(l):
+		linha = list(map(int, input(f"Digite os {c} valores da linha {i + 1} (separe-os por espaço): ").split()))
+		if len(linha) != c:
+			print(f"A linha {i + 1} deve ter exatamente {c} valores.")
+			return
+		matriz.append(linha)
+	maior_valor = matriz[0][0]
+	for linha in matriz:
+		for valor in linha:
+			if valor > maior_valor:
+				maior_valor = valor
+	print(f"O maior valor da matriz é: {maior_valor}")
 
 if __name__ == "__main__":
 	ex_num = input("Qual ex?: ")
